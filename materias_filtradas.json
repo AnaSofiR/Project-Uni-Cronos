@@ -1,0 +1,231 @@
+[
+    {
+        "id": 1,
+        "materia": "Cálculo 1",
+        "profesor": "Dr. Juan Martínez",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "8:00 PM - 10:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "materia": "Cálculo 1",
+        "profesor": "Dr. Juan Martínez",
+        "horario": [
+            {
+                "dia": "Martes",
+                "hora": "10:00 AM - 12:00 P"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "materia": "Cálculo 1",
+        "profesor": "Dr. Juan Martínez",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "6:00 AM - 8:00 AM"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "materia": "Cálculo 1",
+        "profesor": "Dr. Juan Rodríguez",
+        "horario": [
+            {
+                "dia": "Martes",
+                "hora": "10:30 AM - 12:30 PM"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "materia": "Cálculo 1",
+        "profesor": "Dra. María López",
+        "horario": [
+            {
+                "dia": "Miércoles",
+                "hora": "10:30 AM - 12:30 PM"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "materia": "Cálculo 1",
+        "profesor": "Ing. Ana García",
+        "horario": [
+            {
+                "dia": "Jueves",
+                "hora": "8:00 AM - 10:00 AM"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "materia": "Cálculo 1",
+        "profesor": "Lic. José Pérez",
+        "horario": [
+            {
+                "dia": "Viernes",
+                "hora": "10:30 AM - 12:30 PM"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "materia": "Lógica",
+        "profesor": "Dr. Carlos Gómez",
+        "horario": [
+            {
+                "dia": "Martes",
+                "hora": "7:00 AM - 9:00 AM"
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "materia": "Lógica",
+        "profesor": "Dr. Carlos Gómez",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "6:00 AM - 8:00 AM"
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "materia": "Lógica",
+        "profesor": "Lic. Juan Martínez",
+        "horario": [
+            {
+                "dia": "Martes",
+                "hora": "10:30 AM - 12:30 PM"
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "materia": "Lógica",
+        "profesor": "Ing. José Rodríguez",
+        "horario": [
+            {
+                "dia": "Miércoles",
+                "hora": "4:00 PM - 6:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "materia": "Lógica",
+        "profesor": "Dr. Antonio Pérez",
+        "horario": [
+            {
+                "dia": "Jueves",
+                "hora": "8:00 AM - 10:00 AM"
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "materia": "Lógica",
+        "profesor": "Lic. María García",
+        "horario": [
+            {
+                "dia": "Viernes",
+                "hora": "10:30 AM - 12:30 PM"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "materia": "Álgebra Lineal",
+        "profesor": "Dra. Laura Sánchez",
+        "horario": [
+            {
+                "dia": "Miércoles",
+                "hora": "6:00 AM - 8:00 AM"
+            }
+        ]
+    },
+    {
+        "id": 64,
+        "materia": "Álgebra Lineal",
+        "profesor": "Dra. Laura García",
+        "horario": [
+            {
+                "dia": "Jueves",
+                "hora": "8:00 AM - 10:00 AM"
+            },
+            {
+                "dia": "Viernes",
+                "hora": "10:30 AM - 12:30 PM"
+            }
+        ]
+    },
+    {
+        "id": 90,
+        "materia": "Álgebra Lineal",
+        "profesor": "Dr. Laura González",
+        "horario": [
+            {
+                "dia": "Martes",
+                "hora": "9:00 AM - 11:00 AM"
+            },
+            {
+                "dia": "Viernes",
+                "hora": "2:00 PM - 4:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 91,
+        "materia": "Álgebra Lineal",
+        "profesor": "Ing. Carlos Pérez",
+        "horario": [
+            {
+                "dia": "Miércoles",
+                "hora": "6:00 AM - 8:00 AM"
+            },
+            {
+                "dia": "Jueves",
+                "hora": "10:00 AM - 12:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 110,
+        "materia": "Álgebra Lineal",
+        "profesor": "Ing. Ana Rodríguez",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "11:00 AM - 1:00 PM"
+            },
+            {
+                "dia": "Miércoles",
+                "hora": "1:30 PM - 3:30 PM"
+            }
+        ]
+    },
+    {
+        "id": 111,
+        "materia": "Álgebra Lineal",
+        "profesor": "Dr. José García",
+        "horario": [
+            {
+                "dia": "Martes",
+                "hora": "8:00 AM - 10:00 AM"
+            },
+            {
+                "dia": "Jueves",
+                "hora": "10:30 AM - 12:30 PM"
+            }
+        ]
+    }
+]

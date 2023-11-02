@@ -1,0 +1,1369 @@
+{
+    "horarios_clases": [
+    {
+      "id": 1,
+      "materia": "Cálculo 1",
+      "profesor": "Dr. Juan Martínez",
+      "horario": [{"dia":"Lunes", "hora":"8:00 PM - 10:00 PM" }]
+  },
+  {
+      "id": 2,
+      "materia": "Principios de Desarrollo de Software",
+      "profesor": "Lic. María Rodríguez",
+      "horario":[{"dia":"Lunes", "hora":"6:00 AM - 8:00 AM" }]
+  },
+  {
+      "id": 3,
+      "materia": "Fundamentos de Programación",
+      "profesor": "Ing. Pedro Pérez",
+      "horario": [{"dia":"Lunes", "hora":"3:00 PM - 5:00 PM" }]
+  },
+  {
+      "id": 4,
+      "materia": "Lógica",
+      "profesor": "Dr. Carlos Gómez",
+      "horario": [{"dia":"Martes", "hora":"7:00 AM - 9:00 AM" }]
+  },
+  {
+      "id": 5,
+      "materia": "Cálculo 1",
+      "profesor": "Dr. Juan Martínez",
+      "horario": [{"dia":"Martes", "hora":"10:00 AM - 12:00P" }]
+  },
+  {
+      "id": 6,
+      "materia": "Fundamentos de Programación",
+      "profesor": "Ing. Pedro Pérez",
+      "horario":[{"dia":"Martes", "hora":"1:00 PM - 3:00 PM" }]
+  },
+  {
+      "id": 7,
+      "materia": "Álgebra Lineal",
+      "profesor": "Dra. Laura Sánchez",
+      "horario":[{"dia":"Miércoles", "hora":"6:00 AM - 8:00 AM"}]
+  },
+  {
+      "id": 8,
+      "materia": "Introducción a la Informática",
+      "profesor": "Lic. Ana González",
+      "horario":[{"dia":"Miércoles", "hora":"8:30 AM - 11:30 AM"}]
+  },
+  {
+      "id": 9,
+      "materia": "Programación Avanzada",
+      "profesor": "Ing. Luis López",
+      "horario":[{"dia":"Miércoles", "hora":"6:00 PM - 8:00 PM"}]
+  },
+  {
+      "id": 10,
+      "materia": "Estadísticas",
+      "profesor": "Dr. Alberto Rodríguez",
+      "horario":[{"dia":"Jueves", "hora":"6:00 PM - 8:00 PM"}]
+  },
+  {
+      "id": 11,
+      "materia": "Inteligencia Artificial",
+      "profesor": "Dr. José Pérez",
+      "horario":[{"dia":"Jueves", "hora":"6:00 PM - 8:00 PM"}]
+  },
+  {
+      "id": 12,
+      "materia": "Redes de Computadoras",
+      "profesor": "Ing. María Torres",
+      "horario":[{"dia":"Jueves", "hora": "2:00 PM - 4:00 PM"}]
+  },
+  {
+      "id": 13,
+      "materia": "Sistemas Operativos",
+      "profesor": "Lic. Santiago Ramírez",
+      "horario":[{"dia":"Viernes", "hora": "8:00 AM - 10:00 AM"}]
+  },
+  {
+      "id": 14,
+      "materia": "Bases de Datos",
+      "profesor": "Ing. Ana García",
+      "horario":[{"dia":"Viernes", "hora": "10:00 AM - 12:00 PM"}]
+  },
+  {
+      "id": 15,
+      "materia": "Programación Web",
+      "profesor": "Lic. Julia Fernández",
+      "horario":[{"dia":"Viernes", "hora": "2:00 PM - 4:00 PM"}]
+  },
+  {
+      "id": 16,
+      "materia": "Cálculo 1",
+      "profesor": "Dr. Juan Martínez",
+      "horario":[{"dia":"Lunes", "hora": "6:00 AM - 8:00 AM"}]
+  },
+{
+"id": 17,
+      "materia": "Cálculo 1",
+      "profesor": "Dr. Juan Rodríguez",
+      "horario":[{"dia":"Martes", "hora": "10:30 AM - 12:30 PM"}]
+  },
+  {
+      "id": 18,
+      "materia": "Cálculo 1",
+      "profesor": "Dra. María López",
+      "horario":[{"dia":"Miércoles", "hora": "10:30 AM - 12:30 PM"}]
+  },
+  {
+      "id": 19,
+      "materia": "Cálculo 1",
+      "profesor": "Ing. Ana García",
+      "horario":[{"dia":"Jueves", "hora": "8:00 AM - 10:00 AM"}]
+  },
+  {
+      "id": 20,
+      "materia": "Cálculo 1",
+      "profesor": "Lic. José Pérez",
+      "horario":[{"dia":"Viernes", "hora": "10:30 AM - 12:30 PM"}]
+  },
+  {
+      "id": 21,
+      "materia": "Principios de Desarrollo de Software",
+      "profesor": "Lic. María Rodríguez",
+      "horario":[{"dia":"Lunes", "hora": "6:00 AM - 8:00 AM"}]
+  },
+  {
+      "id": 22,
+      "materia": "Principios de Desarrollo de Software",
+      "profesor": "Ing. Juan Martínez",
+      "horario":[{"dia":"Martes", "hora": "10:30 AM - 12:30 PM"}]
+  },
+  {
+      "id": 23,
+      "materia": "Principios de Desarrollo de Software",
+      "profesor": "Lic. José Pérez",
+      "horario":[{"dia":"Miércoles", "hora": "4:00 PM - 6:00 PM"}]
+  },
+  {
+      "id": 24,
+      "materia": "Principios de Desarrollo de Software",
+      "profesor": "Ing. Ana García",
+      "horario":[{"dia":"Jueves", "hora": "6:00 AM - 8:00 AM"}]
+  },
+  {
+      "id": 25,
+      "materia": "Principios de Desarrollo de Software",
+      "profesor": "Dr. Luis López",
+      "horario":[{"dia":"Viernes", "hora": "10:30 AM - 12:30 PM"}]
+  },
+  {
+      "id": 26,
+      "materia": "Fundamentos de Programación",
+      "profesor": "Ing. Pedro Pérez",
+      "horario":[{"dia":"Lunes", "hora": "8:00 AM - 10:00 AM"}]
+  },
+  {
+      "id": 27,
+      "materia": "Fundamentos de Programación",
+      "profesor": "Lic. María Rodríguez",
+      "horario":[{"dia":"Martes", "hora": "10:30 AM - 12:30 PM"}]
+  },
+  {
+      "id": 28,
+      "materia": "Fundamentos de Programación",
+      "profesor": "Dr. Juan Martínez",
+      "horario":[{"dia":"Miércoles", "hora": "4:00 PM - 6:00 PM"}]
+  },
+  {
+      "id": 29,
+      "materia": "Fundamentos de Programación",
+      "profesor": "Ing. Ana García",
+      "horario":[{"dia": "Jueves","hora":"8:00 AM - 10:00 AM"}]
+  },
+  {
+      "id": 30,
+      "materia": "Fundamentos de Programación",
+      "profesor": "Lic. José Pérez",
+      "horario":[{"dia": "Viernes","hora":"10:30 AM - 12:30 PM"}]
+  },
+    {
+      "id": 31,
+      "materia": "Lógica",
+      "profesor": "Dr. Carlos Gómez",
+      "horario":[{"dia": "Lunes", "hora":"6:00 AM - 8:00 AM"}]
+  },
+  {
+      "id": 32,
+      "materia": "Lógica",
+      "profesor": "Lic. Juan Martínez",
+      "horario":[{"dia": "Martes", "hora":"10:30 AM - 12:30 PM"}]
+  },
+  {
+      "id": 33,
+      "materia": "Lógica",
+      "profesor": "Ing. José Rodríguez",
+      "horario":[{"dia": "Miércoles", "hora":"4:00 PM - 6:00 PM"}]
+  },
+  {
+      "id": 34,
+      "materia": "Lógica",
+      "profesor": "Dr. Antonio Pérez",
+      "horario":[{"dia": "Jueves", "hora":"8:00 AM - 10:00 AM"}]
+  },
+  {
+      "id": 35,
+      "materia": "Lógica",
+      "profesor": "Lic. María García",
+      "horario":[{"dia": "Viernes", "hora":"10:30 AM - 12:30 PM"}]
+  },
+  {
+      "id": 36,
+      "materia": "Introducción a la Informática",
+      "profesor": "Lic. Juan Rodríguez",
+      "horario":[{"dia": "Lunes", "hora":"8:00 AM - 10:00 AM"}]
+  },
+  {
+      "id": 37,
+      "materia": "Introducción a la Informática",
+      "profesor": "Ing. Pedro Pérez",
+      "horario":[{"dia": "Martes", "hora":"10:30 AM - 12:30 PM"}]
+  },
+  {
+      "id": 38,
+      "materia": "Introducción a la Informática",
+      "profesor": "Dr. José Martínez",
+      "horario":[{"dia": "Miércoles", "hora":"4:00 PM - 6:00 PM"}]
+  },
+  {
+      "id": 39,
+      "materia": "Introducción a la Informática",
+      "profesor": "Lic. María García",
+      "horario":[{"dia": "Jueves", "hora":"6:00 AM - 8:00 AM"}]
+  },
+  {
+      "id": 40,
+      "materia": "Introducción a la Informática",
+      "profesor": "Ing. Pedro Pérez",
+      "horario":[{"dia": "Viernes", "hora":"10:00 AM - 12:00 PM"}]
+  },
+  {
+      "id": 41,
+      "materia": "Sistemas Operativos",
+      "profesor": "Ing. Luis López",
+      "horario":[{"dia": "Lunes", "hora":"8:00 AM - 10:00 AM"}]
+  },
+  {
+      "id": 42,
+      "materia": "Sistemas Operativos",
+      "profesor": "Lic. Ana González",
+      "horario":[{"dia": "Martes", "hora":"10:00 AM - 12:00 PM"}]
+  },
+  {
+      "id": 43,
+      "materia": "Sistemas Operativos",
+      "profesor": "Dr. Antonio Pérez",
+      "horario":[{"dia": "Miércoles", "hora":"4:00 PM - 6:00 PM"}]
+  },
+  {
+      "id": 44,
+      "materia": "Sistemas Operativos",
+      "profesor": "Ing. Ana García",
+      "horario":[{"dia": "Jueves", "hora":"8:00 AM - 10:00 AM"}]
+  },
+  {
+      "id": 45,
+      "materia": "Sistemas Operativos",
+      "profesor": "Lic. Juan Rodríguez",
+      "horario":[{"dia": "Viernes", "hora":"10:30 AM - 12:30 PM"}]
+  },
+  {
+      "id": 46,
+      "materia": "Bases de Datos",
+      "profesor": "Dr. Antonio Pérez",
+      "horario":[{"dia": "Lunes", "hora":"8:00 AM - 10:00 AM"}]
+  },
+  {
+      "id": 47,
+      "materia": "Bases de Datos",
+      "profesor": "Lic. Juan Martínez",
+      "horario":[{"dia": "Martes", "hora":"10:30 AM - 12:30 PM"}]
+  },
+  {
+      "id": 48,
+      "materia": "Bases de Datos",
+      "profesor": "Ing. Ana García",
+      "horario":[{"dia": "Miércoles", "hora":"6:00 PM - 8:00 PM"}]
+  },
+  {
+    "id": 49,
+    "materia": "Bases de Datos",
+    "profesor": "Lic. María Rodríguez",
+    "horario":[{"dia": "Jueves", "hora": "8:00 AM - 10:00 AM"}]
+},
+{
+    "id": 50,
+    "materia": "Bases de Datos",
+    "profesor": "Dr. Luis López",
+    "horario":[{"dia": "Viernes","hora": "6:00 AM - 8:00 AM"}]
+  },
+{
+    "id": 51,
+    "materia": "Programación Web",
+    "profesor": "Ing. Pedro Pérez",
+    "horario":[{"dia": "Lunes","hora": "8:00 AM - 10:00 AM"}]
+},
+{
+    "id": 52,
+    "materia": "Programación Web",
+    "profesor": "Lic. Juan Rodríguez",
+    "horario":[{"dia": "Martes","hora": "10:30 AM - 12:30 PM"}]
+},
+{
+    "id": 53,
+    "materia": "Programación Web",
+    "profesor": "Dr. José Martínez",
+    "horario":[{"dia": "Miércoles", "hora": "2:00 PM - 4:00 PM"}]
+},
+{
+    "id": 54,
+    "materia": "Programación Web",
+    "profesor": "Ing. Ana García",
+    "horario":[{"dia": "Jueves", "hora":"8:00 AM - 10:00 PM"}]
+},
+{
+    "id": 55,
+    "materia": "Programación Web",
+    "profesor": "Lic. Pedro Pérez",
+     "horario":[{"dia": "Viernes", "hora":"3:00 PM - 5:00 PM"}]
+},
+{
+    "id": 56,
+    "materia": "Física I",
+    "profesor": "Dr. Luis García",
+    "horario":[{"dia": "Lunes", "hora":"6:00 AM - 8:00 AM"}]
+},
+{
+    "id": 57,
+    "materia": "Física I",
+    "profesor": "Dr. Juan Rodríguez",
+    "horario":[{"dia": "Martes", "hora":"10:30 AM - 12:30 PM"}]
+},
+{
+    "id": 58,
+    "materia": "Física I",
+    "profesor": "Dr. José Martínez",
+    "horario":[{"dia": "Miércoles", "hora":"3:00 PM - 5:00 PM"}]
+},
+{
+    "id": 59,
+    "materia": "Física I",
+    "profesor": "Dr. Pedro Pérez",
+    "horario":[{"dia": "Jueves", "hora":"8:00 AM - 10:00 AM"}]
+},
+{
+    "id": 60,
+    "materia": "Física I",
+    "profesor": "Dr. Luis López",
+    "horario":[{"dia": "Viernes", "hora":"10:30 AM - 12:30 PM"}]
+},
+{
+  "id": 61,
+  "materia": "Matemáticas Discretas",
+  "profesor": "Dr. Juan Pérez",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "6:00 AM - 8:00 AM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "10:00 AM - 12:00 PM"
+      }
+  ]
+},
+{
+  "id": 62,
+  "materia": "Introducción a la Programación",
+  "profesor": "Lic. María Rodríguez",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "2:00 PM - 4:00 PM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "8:00 AM - 10:00 AM"
+      }
+  ]
+},
+{
+  "id": 63,
+  "materia": "Física Moderna",
+  "profesor": "Dr. Antonio López",
+  "horario": [
+      {
+          "dia": "Miércoles",
+          "hora": "11:00 AM - 1:00 PM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "1:00 PM - 3:00 PM"
+      }
+  ]
+},
+{
+  "id": 64,
+  "materia": "Álgebra Lineal",
+  "profesor": "Dra. Laura García",
+  "horario": [
+      {
+          "dia": "Jueves",
+          "hora": "8:00 AM - 10:00 AM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "10:30 AM - 12:30 PM"
+      }
+  ]
+},
+{
+  "id": 65,
+  "materia": "Historia del Arte",
+  "profesor": "Lic. Carlos Martínez",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "6:00 AM - 8:00 AM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "10:00 AM - 12:00 PM"
+      }
+  ]
+},
+{
+  "id": 66,
+  "materia": "Introducción a la Biología",
+  "profesor": "Dr. Juan Pérez",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "9:00 AM - 11:00 AM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "9:00 AM - 11:00 PM"
+      }
+  ]
+},
+{
+  "id": 67,
+  "materia": "Introducción a la Biología",
+  "profesor": "Lic. María Rodríguez",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "3:00 PM - 5:00 PM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "8:00 AM - 10:00 AM"
+      }
+  ]
+},
+{
+  "id": 68,
+  "materia": "Química Orgánica",
+  "profesor": "Dr. Antonio López",
+  "horario": [
+      {
+          "dia": "Miércoles",
+          "hora": "9:00 AM - 11:00 AM"
+      },
+      {
+          "dia": "Viernes",
+          "horario": "6:00 PM - 8:00 PM"
+      }
+  ]
+},
+{
+  "id": 69,
+  "materia": "Química Orgánica",
+  "profesor": "Dra. Laura García",
+  "horario": [
+      {
+          "dia": "Jueves",
+          "hora": "9:00 AM - 11:00 AM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "11:00 AM - 1:00 PM"
+      }
+  ]
+},
+{
+  "id": 70,
+  "materia": "Historia del Arte",
+  "profesor": "Lic. Carlos Martínez",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "8:00 AM - 10:00 AM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "11:00 AM - 1:00 PM"
+      }
+  ]
+},
+{
+  "id": 71,
+  "materia": "Historia del Arte",
+  "profesor": "Dr. Elena Torres",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "10:00 AM - 12:00 PM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "2:00 PM - 4:00 PM"
+      }
+  ]
+},
+{
+  "id": 72,
+  "materia": "Introducción a la Economía",
+  "profesor": "Dr. María González",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "6:00 AM - 8:00 AM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "10:30 AM - 12:30 PM"
+      }
+  ]
+},
+{
+  "id": 73,
+  "materia": "Introducción a la Economía",
+  "profesor": "Lic. José Ramírez",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "12:00 PM - 2:00 PM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "7:00 AM - 9:00 AM"
+      }
+  ]
+},
+{
+  "id": 74,
+  "materia": "Literatura Universal",
+  "profesor": "Dr. Laura Pérez",
+  "horario": [
+      {
+          "dia": "Miércoles",
+          "hora": "7:00 AM - 9:00 AM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "2:00 PM - 4:00 PM"
+      }
+  ]
+},
+{
+  "id": 75,
+  "materia": "Literatura Universal",
+  "profesor": "Lic. Juan Rodríguez",
+  "horario": [
+      {
+          "dia": "Jueves",
+          "hora": "8:00 AM - 10:00 AM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "9:00 AM - 11:00 AM"
+      }
+  ]
+},
+{
+  "id": 76,
+  "materia": "Diseño Gráfico",
+  "profesor": "Ing. Ana Martínez",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "8:00 AM - 10:00 AM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "10:00 AM - 12:00 PM"
+      }
+  ]
+},
+{
+  "id": 77,
+  "materia": "Diseño Gráfico",
+  "profesor": "Lic. David López",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "3:00 PM - 5:00 PM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "9:00 AM - 11:00 AM"
+      }
+  ]
+},
+{
+  "id": 78,
+  "materia": "Historia de la Ciencia",
+  "profesor": "Dr. Pedro García",
+  "horario": [
+      {
+          "dia": "Miércoles",
+          "hora": "10:30 AM - 12:30 PM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "2:00 PM - 4:00 PM"
+      }
+  ]
+},
+{
+  "id": 79,
+  "materia": "Historia de la Ciencia",
+  "profesor": "Lic. María Sánchez",
+  "horario": [
+      {
+          "dia": "Jueves",
+          "hora": "8:00 AM - 10:00 AM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "10:30 AM - 12:30 PM"
+      }
+  ]
+},
+{
+  "id": 80,
+  "materia": "Psicología del Aprendizaje",
+  "profesor": "Dr. Juan Pérez",
+"horario": [
+      {
+          "dia": "Lunes",
+          "hora": "7:00 AM - 9:00 AM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "11:00 AM - 1:00 PM"
+      }
+  ]
+},
+{
+  "id": 81,
+  "materia": "Psicología del Aprendizaje",
+  "profesor": "Dra. Laura González",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "1:00 PM - 3:00 PM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "6:00 AM - 8:00 AM"
+      }
+  ]
+},
+{
+  "id": 82,
+  "materia": "Programación Avanzada",
+  "profesor": "Ing. David Rodríguez",
+  "horario": [
+      {
+          "dia": "Miércoles",
+          "hora": "9:00 AM - 11:00 AM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "2:00 PM - 4:00 PM"
+      }
+  ]
+},
+{
+  "id": 83,
+  "materia": "Programación Avanzada",
+  "profesor": "Lic. María Pérez",
+  "horario": [
+      {
+          "dia": "Jueves",
+          "hora": "8:00 AM - 10:00 AM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "10:00 AM - 12:00 PM"
+      }
+  ]
+},
+{
+  "id": 84,
+  "materia": "Química General",
+  "profesor": "Dr. Carlos Martínez",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "8:00 AM - 10:00 AM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "10:00 AM - 12:00 PM"
+      }
+  ]
+},
+{
+  "id": 85,
+  "materia": "Química General",
+  "profesor": "Lic. Ana Rodríguez",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "6:00 PM - 8:00 PM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "6:00 AM - 8:00 AM"
+      }
+  ]
+},
+{
+  "id": 86,
+  "materia": "Dibujo Técnico",
+  "profesor": "Ing. Laura Pérez",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "10:00 AM - 12:00 PM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "3:00 PM - 5:00 PM"
+      }
+  ]
+},
+{
+  "id": 87,
+  "materia": "Dibujo Técnico",
+  "profesor": "Lic. Juan García",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "9:00 AM - 11:00 AM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "10:00 AM - 12:00 PM"
+      }
+  ]
+},
+{
+  "id": 88,
+  "materia": "Historia del Arte",
+  "profesor": "Dr. María Rodríguez",
+  "horario": [
+      {
+          "dia": "Miércoles",
+          "hora": "9:00 AM - 11:00 AM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "10:00 AM - 12:00 PM"
+      }
+  ]
+},
+{
+  "id": 89,
+  "materia": "Historia del Arte",
+  "profesor": "Lic. Pedro Pérez",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "2:00 PM - 4:00 PM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "8:00 AM - 10:00 AM"
+      }
+  ]
+},
+{
+  "id": 90,
+  "materia": "Álgebra Lineal",
+  "profesor": "Dr. Laura González",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "9:00 AM - 11:00 AM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "2:00 PM - 4:00 PM"
+      }
+  ]
+},
+{
+  "id": 91,
+  "materia": "Álgebra Lineal",
+  "profesor": "Ing. Carlos Pérez",
+  "horario": [
+      {
+          "dia": "Miércoles",
+          "hora": "6:00 AM - 8:00 AM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "10:00 AM - 12:00 PM"
+      }
+  ]
+},
+{
+  "id": 92,
+  "materia": "Literatura Universal",
+  "profesor": "Dr. Alejandro Ramírez",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "7:00 AM - 9:00 AM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "11:30 AM - 1:30 PM"
+      }
+  ]
+},
+{
+  "id": 93,
+  "materia": "Literatura Universal",
+  "profesor": "Lic. Ana García",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "4:30 PM - 6:30 PM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "7:00 AM - 9:00 AM"
+      }
+  ]
+},
+{
+  "id": 94,
+  "materia": "Introducción a la Economía",
+  "profesor": "Dr. Carlos Rodríguez",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "10:30 AM - 12:30 PM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "2:30 PM - 4:30 PM"
+      }
+  ]
+},
+{
+  "id": 95,
+  "materia": "Introducción a la Economía",
+  "profesor": "Ing. Laura Martínez",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "9:00 AM - 11:00 AM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "7:30 AM - 9:30 AM"
+      }
+  ]
+},
+{
+  "id": 96,
+  "materia": "Geografía Mundial",
+  "profesor": "Lic. María Pérez",
+  "horario": [
+      {
+          "dia": "Miércoles",
+          "hora": "8:00 AM - 10:00 AM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "8:30 AM - 10:30 AM"
+      }
+  ]
+},
+{
+  "id": 97,
+  "materia": "Geografía Mundial",
+  "profesor": "Dr. Juan García",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "3:00 PM - 5:00 PM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "6:00 AM - 8:00 AM"
+      }
+  ]
+},
+{
+  "id": 98,
+  "materia": "Psicología General",
+  "profesor": "Dr. Laura Rodríguez",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "10:30 AM - 12:30 PM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "3:00 PM - 5:00 PM"
+      }
+  ]
+},
+{
+  "id": 99,
+  "materia": "Psicología General",
+  "profesor": "Lic. Pedro Pérez",
+  "horario": [
+      {
+          "dia": "Miércoles",
+          "hora": "8:30 AM - 10:30 AM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "11:30 AM - 1:30 PM"
+      }
+  ]
+},
+{
+  "id": 100,
+  "materia": "Historia del Arte",
+  "profesor": "Dr. Eduardo García",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "6:00 AM - 8:00 AM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "7:30 AM - 9:30 PM"
+      }
+  ]
+},
+{
+  "id": 101,
+  "materia": "Historia del Arte",
+  "profesor": "Lic. María Rodríguez",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "6:00 PM - 8:00 PM"
+      },
+      {
+          "dia": "Jueves",
+          "hora": "6:00 PM - 8:00 PM"
+      }
+  ]
+},
+{
+  "id": 102,
+  "materia": "Química Orgánica",
+  "profesor": "Dr. Javier Pérez",
+  "horario": [
+      {
+          "dia": "Lunes",
+          "hora": "10:30 AM - 12:30 PM"
+      },
+      {
+          "dia": "Miércoles",
+          "hora": "1:00 PM - 3:00 PM"
+      }
+  ]
+},
+{
+  "id": 103,
+  "materia": "Química Orgánica",
+  "profesor": "Dra. Laura Sánchez",
+  "horario": [
+      {
+          "dia": "Martes",
+          "hora": "9:00 AM - 11:00 AM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "3:00 PM - 5:00 PM"
+      }
+  ]
+},
+{
+  "id": 104,
+  "materia": "Programación Web",
+  "profesor": "Ing. Carlos Martínez",
+  "horario": [
+      {
+          "dia": "Miércoles",
+          "hora": "4:00 PM - 6:00 PM"
+      },
+      {
+          "dia": "Viernes",
+          "hora": "9:00 AM - 11:00 AM"
+      }
+  ]
+},
+  {
+    "id": 105,
+    "materia": "Programación Web",
+    "profesor": "Lic. María Sánchez",
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora": "8:00 AM - 10:00 AM"
+      },
+      {
+        "dia": "Miércoles",
+        "hora": "11:00 AM - 1:00 PM"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "materia": "Programación Web",
+    "profesor": "Dr. Eduardo González",
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora": "2:00 PM - 4:00 PM"
+      },
+      {
+        "dia": "Jueves",
+        "hora": "4:30 PM - 6:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "materia": "Matemáticas Discretas",
+    "profesor": "Lic. Ana López",
+    "horario": [
+      {
+        "dia": "Miércoles",
+        "hora": "8:00 AM - 10:00 AM"
+      },
+      {
+        "dia": "Viernes",
+        "hora": "10:30 AM - 12:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "materia": "Introducción a la Programación",
+    "profesor": "Ing. David Pérez",
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora": "3:00 PM - 5:00 PM"
+      },
+      {
+        "dia": "Miércoles",
+        "hora": "5:30 PM - 7:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "materia": "Física Moderna",
+    "profesor": "Dr. Laura López",
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora": "2:00 PM - 4:00 PM"
+      },
+      {
+        "dia": "Jueves",
+        "hora": "4:30 PM - 6:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "materia": "Álgebra Lineal",
+    "profesor": "Ing. Ana Rodríguez",
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora": "11:00 AM - 1:00 PM"
+      },
+      {
+        "dia": "Miércoles",
+        "hora": "1:30 PM - 3:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "materia": "Álgebra Lineal",
+    "profesor": "Dr. José García",
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora": "8:00 AM - 10:00 AM"
+      },
+      {
+        "dia": "Jueves",
+        "hora": "10:30 AM - 12:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "materia": "Literatura Universal",
+    "profesor": "Lic. Laura Martínez",
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora": "4:00 PM - 6:00 PM"
+      },
+      {
+        "dia": "Miércoles",
+        "hora": "6:30 PM - 8:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "materia": "Literatura Universal",
+    "profesor": "Dr. Pedro Rodríguez",
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora": "2:30 PM - 4:30 PM"
+      },
+      {
+        "dia": "Jueves",
+        "hora": "5:00 PM - 7:00 PM"
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "materia": "Introducción a la Economía",
+    "profesor": "Ing. David Martínez",
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora": "1:00 PM - 3:00 PM"
+      },
+      {
+        "dia": "Miércoles",
+        "hora": "3:30 PM - 5:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "materia": "Introducción a la Economía",
+    "profesor": "Lic. Laura Pérez",
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora": "11:00 AM - 1:00 PM"
+      },
+      {
+        "dia": "Jueves",
+        "hora": "1:30 PM - 3:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "materia": "Geografía Mundial",
+    "profesor": "Dr. José Martínez",
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora": "5:00 PM - 7:00 PM"
+      },
+      {
+        "dia": "Miércoles",
+        "hora": "7:30 PM - 9:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "materia": "Geografía Mundial",
+    "profesor": "Ing. Ana López",
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora": "3:00 PM - 5:00 PM"
+      },
+      {
+        "dia": "Jueves",
+        "hora": "5:30 PM - 7:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "materia": "Psicología General",
+    "profesor": "Lic. María Martínez",
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora": "7:00 AM - 9:00 AM"
+      },
+      {
+        "dia": "Miércoles",
+        "hora": "9:30 AM - 11:30 AM"
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "materia": "Psicología General",
+    "profesor": "Dr. Pedro López",
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora": "5:00 PM - 7:00 PM"
+      },
+      {
+        "dia": "Jueves",
+        "hora": "7:30 PM - 9:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "materia": "Historia del Arte",
+    "profesor": "Lic. Juan Martínez",
+    "horario": [
+      {
+        "dia": "Miércoles",
+        "hora": "8:00 AM - 10:00 AM"
+      },
+      {
+        "dia": "Viernes",
+        "hora": "10:30 AM - 12:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "materia": "Historia del Arte",
+    "profesor": "Dr. Elena Pérez",
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora": "1:00 PM - 3:00 PM"
+      },
+      {
+        "dia": "Miércoles",
+        "hora": "3:30 PM - 5:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "materia": "Química Orgánica",
+    "profesor": "Dr. Javier López",
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora": "10:00 AM - 12:00 PM"
+      },
+      {
+        "dia": "Jueves",
+        "hora": "12:30 PM - 2:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "materia": "Química Orgánica",
+    "profesor": "Ing. Ana Martínez",
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora": "2:00 PM - 4:00 PM"
+      },
+      {
+        "dia": "Miércoles",
+        "hora": "4:30 PM - 6:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "materia": "Filosofía",
+    "profesor": "Dr. Juan López",
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora": "7:00 AM - 9:00 AM"
+      },
+      {
+        "dia": "Jueves",
+        "hora": "9:30 AM - 11:30 AM"
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "materia": "Filosofía",
+    "profesor": "Lic. Laura Rodríguez",
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora": "11:00 AM - 1:00 PM"
+      },
+      {
+        "dia": "Miércoles",
+        "hora": "1:30 PM - 3:30 PM"
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "materia": "Biología Celular",
+    "profesor": "Dr. Pedro García",
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora": "12:30 PM - 2:30 PM"
+      },
+      {
+        "dia": "Jueves",
+        "hora": "3:00 PM - 5:00 PM"
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "materia": "Biología Celular",
+    "profesor": "Lic. María López",
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora": "10:00 AM - 12:00 PM"
+      },
+      {
+        "dia": "Miércoles",
+        "hora": "12:30 PM - 2:30 PM"
+      }
+    ]
+  }
+]
+}

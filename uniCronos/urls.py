@@ -20,5 +20,7 @@ from uniweb import views as uniCronosViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', uniCronosViews.home),
+    path('', uniCronosViews.principal),
 ]
+
+
