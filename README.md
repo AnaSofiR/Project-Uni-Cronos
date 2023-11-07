@@ -52,8 +52,8 @@ cd your-project
 
 
 # How our application works?
-1. You must choose whether you want to add subjects from your degree or core training subjects (NFI).
-2. It will ask you for the name of the subject you want to see and the Professor with whom you would like to see the class.
-3. It will ask for your available times, whether you have preferred times to watch classes or in case you have other obligations.
+1. Choose the times that you do not have available during the week.
+2. Choose the subjects you want to see in the semester.
+3. Choose the teachers you like and then the ones you don't like.
 4. Finally, the application will use this information to generate the schedules that best suit your preferences.
   
