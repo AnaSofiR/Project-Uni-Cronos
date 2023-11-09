@@ -7,6 +7,12 @@ def principal(request):
     
   return render(request, 'principal.html')
 
+def buscar(request):
+  #return HttpResponse('<h1>Welcome to home page</h1>')
+    
+  return render(request, 'buscar.html')
+
+'''
 def procesar_formulario(request):
     if request.method == 'POST':
         profesoresS = request.POST.get('profesores1_json')
@@ -20,3 +26,4 @@ def procesar_formulario(request):
     else:
         formulario = MiFormulario()
     return render(request, 'formulario.html', {'formulario': formulario})
+'''

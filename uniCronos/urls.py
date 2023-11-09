@@ -20,7 +20,8 @@ from uniweb import views as uniCronosViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', uniCronosViews.principal),
+    path('', uniCronosViews.principal, name='principal'),
+    path('buscar.html/',uniCronosViews.buscar, name='buscar'),
 ]
 
 

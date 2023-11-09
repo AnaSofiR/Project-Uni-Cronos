@@ -13,17 +13,10 @@
     <nav class="navbar">
         <img src="{% static 'images/logo.jpeg' %}" alt="Logo UniCronos" class="logo">
         <ul class="nav-links">
-            <li>Crear horario</a></li>
-            <li>Acerca de</a></li>
-            <li>Servicios</a></li>
-            <li>Contacto</a></li>
-            <input type="text" id="searchInput" placeholder="Buscar...">
-            <!-- Resultados de la búsqueda -->
-            <ul id="searchResults">
-            </ul>
-
-            <!-- Script de JavaScript para la búsqueda -->
-            <script src="search.js"></script>
+            <li><a href="{% url 'principal' %}">Crear horario</a></li>
+            <li><a href="{% url 'buscar' %}">Buscar</a></li>
+            <li>Buzón de sugerencias</a></li>
+            
 
             <!-- Mini cartel de bienvenida (Modal) -->
             <div id="welcomeModal" class="modal">

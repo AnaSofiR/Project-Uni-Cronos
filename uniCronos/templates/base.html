@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>UniCronos</title>
+        
+        <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+    </head>
+    <body>
+        <!-- Barra de navegación personalizada -->
+        <nav class="navbar">
+            <img src="{% static 'images/logo.jpeg' %}" alt="Logo UniCronos" class="logo">
+            <ul class="nav-links">
+                <li><a href="principal.html">Crear horario</a></li>
+                <li><a href="buscar.html">Buscar</a></li>
+                <li>Servicios</a></li>
+                <li>Contacto</a></li>
+                
+        </nav> 
+
+        <div class="container">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>
