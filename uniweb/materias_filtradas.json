@@ -1,1 +1,137 @@
-[]
+[
+    {
+        "id": 65,
+        "materia": "Historia del Arte",
+        "profesor": "Lic. Carlos Martínez",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "6:00 AM - 8:00 AM"
+            },
+            {
+                "dia": "Miércoles",
+                "hora": "10:00 AM - 12:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 70,
+        "materia": "Historia del Arte",
+        "profesor": "Lic. Carlos Martínez",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "8:00 AM - 10:00 AM"
+            },
+            {
+                "dia": "Miércoles",
+                "hora": "11:00 AM - 1:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 71,
+        "materia": "Historia del Arte",
+        "profesor": "Dr. Elena Torres",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "10:00 AM - 12:00 PM"
+            },
+            {
+                "dia": "Miércoles",
+                "hora": "2:00 PM - 4:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 88,
+        "materia": "Historia del Arte",
+        "profesor": "Dr. María Rodríguez",
+        "horario": [
+            {
+                "dia": "Miércoles",
+                "hora": "9:00 AM - 11:00 AM"
+            },
+            {
+                "dia": "Viernes",
+                "hora": "10:00 AM - 12:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 89,
+        "materia": "Historia del Arte",
+        "profesor": "Lic. Pedro Pérez",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "2:00 PM - 4:00 PM"
+            },
+            {
+                "dia": "Jueves",
+                "hora": "8:00 AM - 10:00 AM"
+            }
+        ]
+    },
+    {
+        "id": 100,
+        "materia": "Historia del Arte",
+        "profesor": "Dr. Eduardo García",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "6:00 AM - 8:00 AM"
+            },
+            {
+                "dia": "Miércoles",
+                "hora": "7:30 AM - 9:30 PM"
+            }
+        ]
+    },
+    {
+        "id": 101,
+        "materia": "Historia del Arte",
+        "profesor": "Lic. María Rodríguez",
+        "horario": [
+            {
+                "dia": "Martes",
+                "hora": "6:00 PM - 8:00 PM"
+            },
+            {
+                "dia": "Jueves",
+                "hora": "6:00 PM - 8:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 120,
+        "materia": "Historia del Arte",
+        "profesor": "Lic. Juan Martínez",
+        "horario": [
+            {
+                "dia": "Miércoles",
+                "hora": "8:00 AM - 10:00 AM"
+            },
+            {
+                "dia": "Viernes",
+                "hora": "10:30 AM - 12:30 PM"
+            }
+        ]
+    },
+    {
+        "id": 121,
+        "materia": "Historia del Arte",
+        "profesor": "Dr. Elena Pérez",
+        "horario": [
+            {
+                "dia": "Lunes",
+                "hora": "1:00 PM - 3:00 PM"
+            },
+            {
+                "dia": "Miércoles",
+                "hora": "3:30 PM - 5:30 PM"
+            }
+        ]
+    }
+]

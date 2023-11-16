@@ -7,14 +7,19 @@
     <title>UniCronos</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/buscar.css' %}">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
         /* Estilos para el contenedor de la barra de búsqueda */
         .search-container {
-            position: relative;
             width: 300px;
             margin-top: 30px;
         }
+        .buscar{
+            display: flex;
+            margin-top: 30px;
+            margin-left: 200px;
+        }
         /* Estilos para la entrada de texto */
-        .search-input {
+        .searchInput {
             width: calc(100% - 70px);
             padding: 10px;
             font-size: 16px;
@@ -79,6 +84,39 @@
         .saved-list {
             margin-top: 10px;
         }
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        h1{
+            color: #e13e00;
+        }
+        .tabla{
+            margin-top: 50px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            margin-left: 250px;
+            border: rgb(156, 156, 156);
+        }
+        .tabla tr{
+            padding: 5px;
+            width: 70px;
+        }
+        .tabla th{
+            padding: 5px;
+            font-size: 15px;
+            color: #0973cb;
+            width: 200px;
+            height: 50px;
+        }
+        .tabla td{
+            height: 100px;
+            width: 180px;
+        }
+        .tabla td li{
+            float: left;
+        }
+
+
     </style>
 </head>
 <body>
@@ -86,30 +124,38 @@
         <!-- Contenedor de la barra de búsqueda -->
         {% csrf_token %}
         <!-- Entrada de texto para la búsqueda -->
-        <input name="searchInput" type="text" id="searchInput" class="searchInput" placeholder="Buscar">
-        <!-- Botón de guardar -->
-        <button id="saveButton" class="save-button" type="submit">Buscar</button>
+        <div class="buscar">
+            <input name="searchInput" type="text" id="searchInput" class="searchInput" placeholder="Buscar">
+            <!-- Botón de guardar -->
+            <button id="saveButton" class="save-button" type="submit">Buscar</button>
+        </div>
+        
         <!-- Lista de sugerencias -->
         <ul id="autocompleteList" class="autocomplete-list"></ul>
         <!-- Mensaje de éxito -->
     </form>
     
-    <h1>
-        <ul>
-            {% for clase in lista %}
-              <li>
-                Materia: {{ clase.materia }}<br>
-                Profesor: {{ clase.profesor }}<br>
-                Horario:
-                <ul>
-                  {% for horario in clase.horario %}
-                    <li>{{ horario.dia }} - {{ horario.hora }}</li>
-                  {% endfor %}
-                </ul>
-              </li>
-            {% endfor %}
-          </ul>             
-    </h1>
+    <table class="tabla">
+        <tr>
+            <th>Materia</th>
+            <th>Profesor</th>
+            <th>Horario</th>
+        </tr>
+        {% for item in lista %}
+            <tr>
+                <td>{{ item.materia }}</td> 
+                <td>{{ item.profesor }}</td>
+                {% for horario in item.horario %}
+                <td>
+                    <li>{{ horario.dia }}</li>
+                    <li>{{ horario.hora }}</li>    
+                </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+                    
+    
 
     <script>
         // Lista de palabras para el autocompletado

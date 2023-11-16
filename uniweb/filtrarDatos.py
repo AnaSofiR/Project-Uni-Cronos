@@ -8,11 +8,16 @@ with open(ruta_materias_json, "r", encoding="utf-8") as file:
     data = json.load(file)
 
 def filtrar(materias):
+    print(materias)
+    m = materias[0]
+    print(m)
+    materiass = m.split(",")
+    print(materiass)
     # Normalizar el JSON usando la clave "horarios_clases"
     df = pd.json_normalize(data, 'horarios_clases')
 
     # Filtrar las clases según las materias
-    clases_filtradas = df[df['materia'].isin(materias)].to_dict(orient='records')
+    clases_filtradas = df[df['materia'].isin(materiass)].to_dict(orient='records')
 
     # Ruta del archivo de salida
     ruta_archivo_salida = os.path.join(os.path.dirname(__file__), 'materias_filtradas.json')

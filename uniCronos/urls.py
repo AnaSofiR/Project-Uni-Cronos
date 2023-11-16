@@ -23,7 +23,7 @@ urlpatterns = [
     path('', uniCronosViews.inicio, name='inicio'),
     path('principal/', uniCronosViews.principal, name='principal'),
     path('buscar/<str:lista>/',uniCronosViews.buscar, name='buscar'),
-    path('horario/<str:horario1>/<str:horario2>/<str:horario3>/', uniCronosViews.horario, name='horario'),
+    path('horario/<str:result>/', uniCronosViews.horario, name='horario'),
     path('sugerencias/', uniCronosViews.sugerencias, name='sugerencias'),
 ]
 

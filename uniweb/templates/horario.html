@@ -1,35 +1,56 @@
+{% include 'navbar.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        h1{
+            color: #e13e00;
+        }
+        .tabla{
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            margin-left: 350px;
+        }
+        .tabla tr{
+            padding: 5px;
+            width: 70px;
+        }
+        .tabla th{
+            padding: 5px;
+            font-size: 15px;
+            color: #0973cb;
+            width: 200px;
+            height: 50px;
+        }
+        .tabla td{
+            height: 50px;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Prueba</h1>
-    <h2>Horario 1</h2>
-    <ul>
+    <h1>Tu horario</h1>
+    <table class="tabla">
+        <tr>
+            <th>Materia</th>
+            <th>Horario</th>
+            <th>Profesor</th>
+        </tr>
         {% for item in horario1_data %}
-            <li>Materia: {{ item.materia }}</li>
-            <li>Horario: {{ item.horario }}</li>
-            <li>Profesor: {{ item.profesor }}</li>
+            <tr>
+                <td>{{ item.materia }}</td>
+                <td>{{ item.horario }}</td>
+                <td>{{ item.profesor }}</td>
+            </tr>
         {% endfor %}
-    </ul>
-    <ul>
-        {% for item in horario2_data %}
-            <li>Materia: {{ item.materia }}</li>
-            <li>Horario: {{ item.horario }}</li>
-            <li>Profesor: {{ item.profesor }}</li>
-        {% endfor %}
-    </ul>
-    <ul>
-        {% for item in horario3_data %}
-            <li>Materia: {{ item.materia }}</li>
-            <li>Horario: {{ item.horario }}</li>
-            <li>Profesor: {{ item.profesor }}</li>
-        {% endfor %}
-    </ul> 
-
+    </table>
     <footer>
         <p>&copy; 2023 - UniCronos</p>
     </footer>

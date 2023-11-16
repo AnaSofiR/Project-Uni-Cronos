@@ -167,7 +167,7 @@ btnGuardarDatos.addEventListener('click', () => {
         }
     }
     // Almacenar las materias en el campo oculto en formato JSON
-    materiasJsonInput.value = JSON.stringify(materias_seleccionadas);
+    materiasJsonInput.value = materias_seleccionadas.join(',');
 
 
     profesoresN.push(profesorN1.value)
