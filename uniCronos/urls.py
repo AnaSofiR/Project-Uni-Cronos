@@ -20,8 +20,11 @@ from uniweb import views as uniCronosViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', uniCronosViews.principal, name='principal'),
-    path('buscar.html/',uniCronosViews.buscar, name='buscar'),
+    path('', uniCronosViews.inicio, name='inicio'),
+    path('principal/', uniCronosViews.principal, name='principal'),
+    path('buscar/<str:lista>/',uniCronosViews.buscar, name='buscar'),
+    path('horario/<str:horario1>/<str:horario2>/<str:horario3>/', uniCronosViews.horario, name='horario'),
+    path('sugerencias/', uniCronosViews.sugerencias, name='sugerencias'),
 ]
 
 

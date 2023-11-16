@@ -1,236 +1,222 @@
 {% load static %}
+{% include 'navbar.html' %}
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>UniCronos</title>
-    
-    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+    <title>UniCronos</title>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/principal.css' %}">
 </head>
 <body>
-    <!-- Barra de navegación personalizada -->
-    <nav class="navbar">
-        <img src="{% static 'images/logo.jpeg' %}" alt="Logo UniCronos" class="logo">
-        <ul class="nav-links">
-            <li><a href="{% url 'principal' %}">Crear horario</a></li>
-            <li><a href="{% url 'buscar' %}">Buscar</a></li>
-            <li>Buzón de sugerencias</a></li>
-            
-
-            <!-- Mini cartel de bienvenida (Modal) -->
-            <div id="welcomeModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <h3>Bienvenido a UniCronos</h3>
-                    <p>Antes de empezar danos tu nombre</p>
-
+    <form method="POST">
+        {% csrf_token %}
+        <div class="superContenedor1">
+            <div class="superContenedor2">
+                <div class="contenedor">
+                    <!-- Agregar las materias -->
+                    <div class="materias">
+                        <h2>Agrega tus materias</h2>
+                        <div>
+                            <input type="text" class="materia" name="materia" id="materia" placeholder="Materia" required>
+                            <ul class="list"></ul>
+                        </div>
+                        <div id="dinamic"></div>
+                        <button id="agregar_materia">Agregar materia</button>
+                        <input type="hidden" id="materias_json" name="materias_json" value="[]">
+                    </div>
+                    
+                    <!-- Agregar los profesores que no le gustan -->
+                    <div class="profesoresNo">
+                        <h2>Profesores que quieres evitar</h2>
+                        <div>
+                            <input type="text" class="profesor1" name="profesor1" id="profesor1" placeholder="Profesor" required>
+                            <ul class="list"></ul>
+                        </div>
+                        <div id="dinamic2"></div>
+                        <button id="agregar_profesor1">Agregar Profesor</button>
+                        <input type="hidden" id="profesores1_json" name="profesores1_json" value="[]">
+                    </div>
+                    
+                    <!-- Agregar los profesores que sí le gustan -->
+                    <div class="profesoresSi">
+                        <h2>Profesores que te gustan</h2>
+                        <div>
+                            <input type="text" class="profesor2" name="profesor2" id="profesor2" placeholder="Profesor" required>
+                            <ul class="list"></ul>
+                        </div>
+                        <div id="dinamic3"></div>
+                        <button id="agregar_profesor2">Agregar Profesor</button>
+                        <input type="hidden" id="profesores2_json" name="profesores2_json" value="[]">
+                    </div>
+                </div>
+        
+                <div class="agenda">
+                    <h2>Elige tus horarios no disponibles o que quieras evitar <br> (Si no tienes, omite este paso)</h2>
+                    <!-- Genera las horas de 6 am a 9 pm de lunes a viernes -->
+                    <table>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                        <!-- Genera las filas de la agenda -->
+                        <tr>
+                            <td>6:00AM - 7:00AM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '6:00 AM - 7:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '6:00 AM - 7:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '6:00 AM - 7:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '6:00 AM - 7:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '6:00 AM - 7:00 AM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>7:00AM - 8:00AM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '7:00 AM - 8:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '7:00 AM - 8:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '7:00 AM - 8:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '7:00 AM - 8:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '7:00 AM - 8:00 AM')">Reservar</button></td>   
+                            <!-- Repite para los otros días --> 
+                        </tr>
+                        <tr>
+                            <td>8:00AM - 9:00AM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '8:00 AM - 9:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '8:00 AM - 9:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '8:00 AM - 9:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '8:00 AM - 9:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '8:00 AM - 9:00 AM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>9:00AM - 10:00AM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '9:00 AM - 10:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '9:00 AM - 10:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '9:00 AM - 10:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '9:00 AM - 10:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '9:00 AM - 10:00 AM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>10:00AM - 11:00AM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '10:00 AM - 11:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '10:00 AM - 11:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '10:00 AM - 11:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '10:00 AM - 11:00 AM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '10:00 AM - 11:00 AM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>11:00AM - 12:00PM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '11:00 AM - 12:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '11:00 AM - 12:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '11:00 AM - 12:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '11:00 AM - 12:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '11:00 AM - 12:00 PM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>12:00PM - 1:00PM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '12:00 PM - 1:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '12:00 PM - 1:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '12:00 PM - 1:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '12:00 PM - 1:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '12:00 PM - 1:00 PM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>1:00PM - 2:00PM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '1:00 PM - 2:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '1:00 PM - 2:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '1:00 PM - 2:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '1:00 PM - 2:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '1:00 PM - 2:00 PM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>2:00PM - 3:00PM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '2:00 PM - 3:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '2:00 PM - 3:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '2:00 PM - 3:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '2:00 PM - 3:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '2:00 PM - 3:00 PM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>3:00PM - 4:00PM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '3:00 PM - 4:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '3:00 PM - 4:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '3:00 PM - 4:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '3:00 PM - 4:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '3:00 PM - 4:00 PM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>4:00PM - 5:00PM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '4:00 PM - 5:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '4:00 PM - 5:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '4:00 PM - 5:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '4:00 PM - 5:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '4:00 PM - 5:00 PM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>5:00PM - 6:00PM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '5:00 PM - 6:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '5:00 PM - 6:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '5:00 PM - 6:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '5:00 PM - 6:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '5:00 PM - 6:00 PM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>6:00PM - 7:00PM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '6:00 PM - 7:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '6:00 PM - 7:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '6:00 PM - 7:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '6:00 PM - 7:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '6:00 PM - 7:00 PM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>7:00PM - 8:00PM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '7:00 PM - 8:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '7:00 PM - 8:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '7:00 PM - 8:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '7:00 PM - 8:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '7:00 PM - 8:00 PM')">Reservar</button></td>   
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        <tr>
+                            <td>8:00PM - 9:00PM</td>
+                            <td><button class="btn" type="button" onclick="reservar('lunes', '8:00 PM - 9:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('martes', '8:00 PM - 9:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('miercoles', '8:00 PM - 9:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('jueves', '8:00 PM - 9:00 PM')">Reservar</button></td>
+                            <td><button class="btn" type="button" onclick="reservar('viernes', '8:00 PM - 9:00 PM')">Reservar</button></td> 
+                            <!-- Repite para los otros días -->
+                        </tr>
+                        
+                                    <!-- Repite para otras horas -->
+                    </table>
+                    <input type="hidden" id="horarios_json" name="horarios_json" value="[]">
                 </div>
             </div>
-            <script>
-                // Mostrar el modal al cargar la página
-                window.onload = function() {
-                    document.getElementById('welcomeModal').style.display = 'block';
-                }
-
-                // Cerrar el modal cuando se hace clic en la "x"
-                function closeModal() {
-                    document.getElementById('welcomeModal').style.display = 'none';
-                }
-            </script>
-    </nav>  
-
-    <h2>Elige tus horarios no disponibles o que quieras evitar</h2>
-    <h3>Si no tienes déjalo en blanco</h3>
-
-    <div id="agenda">
-        <!-- Genera las horas de 6 am a 9 pm de lunes a viernes -->
-        <table>
-            <tr>
-                <th>Hora</th>
-                <th>Lunes</th>
-                <th>Martes</th>
-                <th>Miércoles</th>
-                <th>Jueves</th>
-                <th>Viernes</th>
-            </tr>
-            <!-- Genera las filas de la agenda -->
-            <tr>
-                <td>6:00AM - 7:00AM</td>
-                <td><button onclick="reservar('lunes', '6:00 AM - 7:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '6:00 AM - 7:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '6:00 AM - 7:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '6:00 AM - 7:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '6:00 AM - 7:00 AM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>7:00AM - 8:00AM</td>
-                <td><button onclick="reservar('lunes', '7:00 AM - 8:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '7:00 AM - 8:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '7:00 AM - 8:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '7:00 AM - 8:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '7:00 AM - 8:00 AM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>8:00AM - 9:00AM</td>
-                <td><button onclick="reservar('lunes', '8:00 AM - 9:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '8:00 AM - 9:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '8:00 AM - 9:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '8:00 AM - 9:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '8:00 AM - 9:00 AM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>9:00AM - 10:00AM</td>
-                <td><button onclick="reservar('lunes', '9:00 AM - 10:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '9:00 AM - 10:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '9:00 AM - 10:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '9:00 AM - 10:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '9:00 AM - 10:00 AM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>10:00AM - 11:00AM</td>
-                <td><button onclick="reservar('lunes', '10:00 AM - 11:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '10:00 AM - 11:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '10:00 AM - 11:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '10:00 AM - 11:00 AM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '10:00 AM - 11:00 AM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>11:00AM - 12:00PM</td>
-                <td><button onclick="reservar('lunes', '11:00 AM - 12:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '11:00 AM - 12:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '11:00 AM - 12:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '11:00 AM - 12:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '11:00 AM - 12:00 PM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>12:00PM - 1:00PM</td>
-                <td><button onclick="reservar('lunes', '12:00 PM - 1:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '12:00 PM - 1:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '12:00 PM - 1:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '12:00 PM - 1:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '12:00 PM - 1:00 PM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>1:00PM - 2:00PM</td>
-                <td><button onclick="reservar('lunes', '1:00 PM - 2:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '1:00 PM - 2:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '1:00 PM - 2:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '1:00 PM - 2:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '1:00 PM - 2:00 PM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>2:00PM - 3:00PM</td>
-                <td><button onclick="reservar('lunes', '2:00 PM - 3:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '2:00 PM - 3:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '2:00 PM - 3:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '2:00 PM - 3:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '2:00 PM - 3:00 PM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>3:00PM - 4:00PM</td>
-                <td><button onclick="reservar('lunes', '3:00 PM - 4:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '3:00 PM - 4:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '3:00 PM - 4:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '3:00 PM - 4:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '3:00 PM - 4:00 PM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>4:00PM - 5:00PM</td>
-                <td><button onclick="reservar('lunes', '4:00 PM - 5:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '4:00 PM - 5:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '4:00 PM - 5:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '4:00 PM - 5:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '4:00 PM - 5:00 PM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>5:00PM - 6:00PM</td>
-                <td><button onclick="reservar('lunes', '5:00 PM - 6:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '5:00 PM - 6:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '5:00 PM - 6:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '5:00 PM - 6:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '5:00 PM - 6:00 PM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>6:00PM - 7:00PM</td>
-                <td><button onclick="reservar('lunes', '6:00 PM - 7:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '6:00 PM - 7:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '6:00 PM - 7:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '6:00 PM - 7:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '6:00 PM - 7:00 PM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>7:00PM - 8:00PM</td>
-                <td><button onclick="reservar('lunes', '7:00 PM - 8:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '7:00 PM - 8:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '7:00 PM - 8:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '7:00 PM - 8:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '7:00 PM - 8:00 PM')">Reservar</button></td>   
-                <!-- Repite para los otros días -->
-            </tr>
-            <tr>
-                <td>8:00PM - 9:00PM</td>
-                <td><button onclick="reservar('lunes', '8:00 PM - 9:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('martes', '8:00 PM - 9:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('miercoles', '8:00 PM - 9:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('jueves', '8:00 PM - 9:00 PM')">Reservar</button></td>
-                <td><button onclick="reservar('viernes', '8:00 PM - 9:00 PM')">Reservar</button></td> 
-                <!-- Repite para los otros días -->
-            </tr>
-            
-                        <!-- Repite para otras horas -->
-        </table>
-        <input type="hidden" id="horarios_json" name="horarios_json" value="[]">
-    </div>
-
-    <!-- Agregar las materias -->
-    
-    <h2>Agrega tus materias</h2>
-    <div>
-        <input type="text" name="materia" id="materia" placeholder="Materia" required>
-        <ul class="list"></ul>
-    </div>
-    <div id="dinamic"></div>
-    <button id="agregar_materia">Agregar materia</button>
-    <input type="hidden" id="materias_json" name="materias_json" value="[]">
-
-
-    <h2>Profesores que quieres evitar</h2>
-    <div>
-        <input type="text" name="profesor1" id="profesor1" placeholder="Profesor" required>
-        <ul class="list"></ul>
-    </div>
-    <div id="dinamic2"></div>
-    <button id="agregar_profesor1">Agregar Profesor</button>
-    <input type="hidden" id="profesores1_json" name="profesores1_json" value="[]">
-    
-
-    <h2>Profesores que te gustan</h2>
-    <div>
-        <input type="text" name="profesor2" id="profesor2" placeholder="Profesor" required>
-        <ul class="list"></ul>
-    </div>
-    <div id="dinamic3"></div>
-    <button id="agregar_profesor2">Agregar Profesor</button>
-    <input type="hidden" id="profesores2_json" name="profesores2_json" value="[]">
-
-    <button id="guardar_datos">Guardar datos</button>
-
-
+        <div class="botones">
+            <button type="button" id="guardar_datos" class="guardar">Guardar datos</button>
+            <input type="submit" class="crear" value="Crear horario">
+        </div>    
+        
+        </div>    
+    </form>
     <script src="{% static 'js/principal.js' %}"></script>
+    <footer>
+        <p>&copy; 2023 - UniCronos</p>
+    </footer>
 </body>
 </html>
 

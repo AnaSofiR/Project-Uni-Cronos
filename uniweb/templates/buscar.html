@@ -1,19 +1,197 @@
 {% load static %}
-
+{% include 'navbar.html' %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>UniCronos</title>
-    
-    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/buscar.css' %}">
+    <style>
+        /* Estilos para el contenedor de la barra de búsqueda */
+        .search-container {
+            position: relative;
+            width: 300px;
+            margin-top: 30px;
+        }
+        /* Estilos para la entrada de texto */
+        .search-input {
+            width: calc(100% - 70px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+
+        /* Estilos para el botón de guardar */
+        .save-button {
+            width: 100px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 0 4px 4px 0;
+            background-color: #3498db;
+            color: white;
+        }
+
+        /* Estilos para la lista de sugerencias */
+        .autocomplete-list {
+            position: absolute;
+            top: 0;
+            left: calc(100% - 1px); /* Al lado derecho de la barra de búsqueda */
+            z-index: 1;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+            width: max-content; /* Ajustar el ancho según el contenido */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* Estilos para cada elemento de la lista de sugerencias */
+        .autocomplete-item {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Estilos para resaltar la sugerencia seleccionada */
+        .autocomplete-item:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Estilos para el mensaje de éxito */
+        .success-message {
+            color: green;
+            margin-top: 10px;
+        }
+
+        /* Estilos para el conteo de palabras */
+        .word-count {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* Estilos para la lista de palabras guardadas */
+        .saved-list {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Barra de navegación personalizada -->
-    <nav class="navbar">
-        <img src="{% static 'images/logo.jpeg' %}" alt="Logo UniCronos" class="logo">
-        <ul class="nav-links">
-            <li><a href="{% url 'principal' %}">Crear horario</a></li>
-            <li><a href="{% url 'buscar' %}">Buscar</a></li>
-            <li>Buzón de sugerencias</a></li>        
-    </nav> 
+    <form method="POST">
+        <!-- Contenedor de la barra de búsqueda -->
+        {% csrf_token %}
+        <!-- Entrada de texto para la búsqueda -->
+        <input name="searchInput" type="text" id="searchInput" class="searchInput" placeholder="Buscar">
+        <!-- Botón de guardar -->
+        <button id="saveButton" class="save-button" type="submit">Buscar</button>
+        <!-- Lista de sugerencias -->
+        <ul id="autocompleteList" class="autocomplete-list"></ul>
+        <!-- Mensaje de éxito -->
+    </form>
+    
+    <h1>
+        <ul>
+            {% for clase in lista %}
+              <li>
+                Materia: {{ clase.materia }}<br>
+                Profesor: {{ clase.profesor }}<br>
+                Horario:
+                <ul>
+                  {% for horario in clase.horario %}
+                    <li>{{ horario.dia }} - {{ horario.hora }}</li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endfor %}
+          </ul>             
+    </h1>
+
+    <script>
+        // Lista de palabras para el autocompletado
+        const words = ["Cálculo 1", "Principios de Desarrollo de Software", "Fundamentos de Programación", "Lógica", "Introducción a la Informática", "Programación Avanzada", "Estadísticas", "Inteligencia Artificial", "Redes de Computadoras", "Programación Web", "Física I", "Matemáticas Discretas", "Física Moderna", "Introducción a la Biología", "Química Orgánica", "Introducción a la Economía", "Diseño Gráfico", "Historia de la Ciencia", "Psicología del Aprendizaje", "Química General", "Dibujo Técnico", "Psicología General", "Biología Celular"];
+
+        // Obtener elementos del DOM
+        const searchInput = document.getElementById('searchInput');
+        const autocompleteList = document.getElementById('autocompleteList');
+        const savedList = document.getElementById('savedList');
+        const successMessage = document.getElementById('successMessage');
+        const wordCount = document.getElementById('wordCount');
+
+        // Agregar evento de entrada para la barra de búsqueda
+        searchInput.addEventListener('input', function () {
+            const inputValue = this.value.toLowerCase();
+
+            // Función para quitar tildes y caracteres especiales
+            const removeAccents = (str) => str.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+
+            // Filtrar palabras que comienzan con la entrada del usuario
+            const matches = words.filter(word => removeAccents(word.toLowerCase()).startsWith(removeAccents(inputValue)));
+
+            // Limpiar la lista de sugerencias
+            autocompleteList.innerHTML = '';
+
+            // Crear elementos de lista para cada sugerencia
+            matches.forEach(function (match) {
+                const listItem = document.createElement('li');
+                listItem.classList.add('autocomplete-item');
+                listItem.innerText = match;
+
+                // Manejar clic en una sugerencia
+                listItem.addEventListener('click', function () {
+                    searchInput.value = match;
+                    autocompleteList.style.display = 'none';
+                });
+
+                autocompleteList.appendChild(listItem);
+            });
+
+            // Mostrar la lista de sugerencias si hay coincidencias y la barra de búsqueda no está vacía
+            if (matches.length > 0 && inputValue !== '') {
+                autocompleteList.style.display = 'block';
+            } else {
+                autocompleteList.style.display = 'none';
+            }
+        });
+
+        // Agregar evento de clic al documento para ocultar la lista cuando se hace clic en otro lugar
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.search-container')) {
+                autocompleteList.style.display = 'none';
+            }
+        });
+
+        // Función para guardar la búsqueda y actualizar la lista y el conteo
+        function guardar() {
+            const searchTerm = searchInput.value;
+
+            // Limpiar la lista oculta antes de agregar una nueva palabra
+            savedList.innerHTML = '';
+
+            // Agregar la palabra más reciente a la lista oculta
+            const listItem = document.createElement('li');
+            listItem.innerText = searchTerm;
+            savedList.appendChild(listItem);
+
+            // Mostrar el mensaje de éxito
+            successMessage.innerText = `Palabra "${searchTerm}" guardada correctamente.`;
+
+            // Actualizar el conteo de palabras
+            const wordCountValue = savedList.children.length;
+            wordCount.innerText = `Número de palabras guardadas: ${wordCountValue}`;
+
+            // Ocultar el mensaje de éxito después de 3 segundos
+            setTimeout(() => {
+                successMessage.innerText = '';
+            }, 3000);
+        }
+    </script>
+        <footer>
+            <p>&copy; 2023 - UniCronos</p>
+        </footer>
+</body>
+</html> 

@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root{
+    --azul: #4ca1f5;
+    --azulClaro: #7cb7f8;
+    --naranja: #e13e00;
+    --naranjaClaro: #ffa460;
+    --degradado: linear-gradient(90deg, var(--azulClaro),var(--azul));
+}
+*{
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.welcome-container {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;     
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.cta-button:hover {
+    background-color: #258cd1;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #4ca1f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 0px;
+    background-color: white;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 30px;
+
+    
+}
+.logo {
+    max-width: 150px;
+    margin-left: 20px;
+}
+
+
+
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--azul);
+}
+
+/* Estilos adicionales para la barra de navegación */
+.nav-links a:hover {
+    color: var(--azulClaro);
+}
+.card-border{
+    border: solid 10px white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease-out 0.2s;
+}
+.card-border:hover{
+    transform: scale(1.05);
+}
+
+
+form{
+    padding: 0px 55px;
+    text-align: center;
+    width: 700px;
+    margin-top: 0px;
+}
+
+h2{
+    color: #e13e00;
+    font-size: 20px;
+    font-weight: 1000px;
+    margin-bottom: 5px;
+}
+h3{
+    color: #e13e00;
+    font-size: 15px;
+    font-weight: 1000px;
+}
+
+.superContenedor1{
+    display: flex;
+}
+
+.contenedor{
+    display: flex;
+}
+
+.materias{
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgb(0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 150px;
+    margin-top: 60px;
+    margin-left: 30px;
+    height: 150px;
+}
+.materias h2, .profesoresSi h2, .profesoresNo h2{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.materias .materia, .profesoresNo .profesor1, .profesoresSi .profesor2{
+    border-radius: 5px;
+    height: 30px;
+    box-shadow: 0 0 20px rgb(156, 156, 156);
+}
+.materias button, .profesoresSi button, .profesoresNo button{
+    font-size: 15px;
+    margin-bottom: 20px;
+    background-color: var(--azulClaro);
+    box-shadow: 0 0 20px rgb(156, 156, 156);
+    border-radius: 5px;
+    height: 30px;
+}
+
+.profesoresNo,
+.profesoresSi{
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgb(0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 150px;
+    margin-top: 60px;
+    margin-left: 30px;
+    height: 150px;
+}
+
+.agenda{
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgb(0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 730px;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.agenda h2{
+    margin-bottom: 20px;
+}
+
+.agenda table{
+    margin-left: 12 px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgb(156, 156, 156);
+    width: 720px;
+}
+
+.agenda tr{
+    padding: 5px;
+}
+
+.agenda th{
+    padding: 5px;
+    font-size: 15px;
+    color: #0973cb;
+}
+
+.agenda td{
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.agenda .btn{
+    background-color: whitesmoke;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    height: 20px;
+}
+
+.agenda .btn:hover{
+    background-color: #ffa460;
+}
+
+.guardar{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 17px;
+    background-color: var(--azulClaro);
+    margin-top: 130px;
+    margin-bottom: 20px;
+    margin-left: 140px;
+    box-shadow: 0 0 20px rgb(156, 156, 156);
+    height: 60px;
+    width: 130px;
+    border-radius: 5px;
+}
+
+.crear{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 17px;
+    background-color: var(--azulClaro);
+    margin-left: 140px;
+    box-shadow: 0 0 20px rgb(156, 156, 156);
+    height: 60px;
+    width: 130px;
+    border-radius: 5px;
+}
+
+

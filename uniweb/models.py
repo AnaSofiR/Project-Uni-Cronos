@@ -35,3 +35,10 @@ class horarioTaller(models.Model):
 
 class MateriaSeleccionada(models.Model):
     nombre = models.CharField(max_length=100)
+
+class Sugerencia(models.Model):
+    nombre = models.CharField(max_length=100)
+    sugerencia = models.TextField()
+
+    def __str__(self):
+        return self.nombre

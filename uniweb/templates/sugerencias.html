@@ -1,0 +1,24 @@
+{% load static %}
+{% include 'navbar.html' %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>UniCronos</title>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <!-- Barra de navegación personalizada -->
+    <form method="post" action="{% url 'sugerencias' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar sugerencia</button>
+    </form>
+    <!-- Pie de página con información del proyecto y enlaces a redes sociales -->
+    <footer>
+        <p>&copy; 2023 - UniCronos</p>
+    </footer>
+</body>
+</html>

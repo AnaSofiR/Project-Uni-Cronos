@@ -1,0 +1,27 @@
+import pandas as pd
+import json
+import os
+
+ruta_materias_json = os.path.join(os.path.dirname(__file__), 'materias.json')
+
+with open(ruta_materias_json, "r", encoding="utf-8") as file:
+    data = json.load(file)
+m= "Cálculo"
+def filtrar(materias):
+    print(materias)
+
+    df = pd.json_normalize(data, 'horarios_clases')
+
+    materias_a_filtrar = materias
+
+    resultados_filtrados = []
+
+    for materia in materias_a_filtrar:
+        materia_filtrada = df[df['materia'] == materia]
+        resultados_filtrados.extend(materia_filtrada.to_dict(orient='records'))
+
+    nombre_archivo = os.path.join(os.path.dirname(__file__), 'materias_filtradas.json')
+
+    with open(nombre_archivo, 'w', encoding='utf-8') as json_file:
+        json.dump(resultados_filtrados, json_file, ensure_ascii=False, indent=4)
+filtrar(m)

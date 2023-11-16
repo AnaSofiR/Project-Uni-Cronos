@@ -11,6 +11,25 @@ const materiasJsonInput = document.querySelector('#materias_json');
 const profesorNJsonInput = document.querySelector('#profesores1_json');
 const profesorSJsonInput = document.querySelector('#profesores2_json');
 
+const buttons = document.querySelectorAll('.btn');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const currentColor = button.style.backgroundColor;
+        const clicColor = '#ff7c39';
+        const originalColor = 'whitesmoke';
+    
+        if (currentColor === originalColor ||currentColor === '') {
+            // Si el color actual es igual al color original o no está definido,
+            // cambia el color al nuevo color
+            button.style.backgroundColor = clicColor;
+        } else {
+            // Si el color actual es diferente al color original, vuelve al color original
+            button.style.backgroundColor = originalColor;
+        }
+    
+    })
+})
 
 let total_materias = 2;
 let total_profesoresN = 2;
@@ -105,9 +124,17 @@ const actualizarContadorProfesores2 = () => {
 //--------------------------HORARIOS--------------------------
 function reservar(dia,hora){
     const reserva = {dia,hora};
-    horarioN.push(reserva);
-
+    const index = horarioN.findIndex(item => item.dia === dia && item.hora === hora);
+    if (index !== -1) {
+        // Si la reserva ya existe, eliminarla
+        horarioN.splice(index, 1);
+    } else {
+        // Si la reserva no existe, agregarla
+        horarioN.push(reserva);
+    }
+    // Actualizar el valor del campo de entrada JSON
     horariosJsonInput.value = JSON.stringify(horarioN);
+    // Mostrar el arreglo en la consola para depuración
     console.log(horarioN);
 }
 

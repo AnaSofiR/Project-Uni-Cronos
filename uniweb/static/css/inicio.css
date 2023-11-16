@@ -1,0 +1,61 @@
+html{
+    overflow: hidden;
+}
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+}
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/horario.png) no-repeat;
+    background-size: 600px;
+    background-position: right;
+    margin-bottom: 100px;
+}
+
+.inicio .image img{
+    width: 40vw;
+    margin-right: 0px;
+}
+
+.inicio .content{
+    margin-bottom: 200px;
+}
+.inicio .content h3{
+    font-size: 4rem;
+    margin-right: 500px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #ff7c39;
+    text-transform: uppercase;
+}
+
+.inicio .content h3 img{
+    height: 70px;
+}
+
+.inicio .content span{
+    font-size: 30px;
+    margin-right: 430px;
+    color: #832702;
+}
+
+.inicio .content p{
+    font-size: 20px;
+    margin-right: 430px;
+    margin-bottom: 20px;
+}
+
+.inicio .btn{
+    margin-right: 500px;
+    margin-top: 500px;
+    border-radius: 25px;
+    background: linear-gradient(90deg,#0069c0 ,#7cb7f8);
+    padding: .8rem 3rem;
+    color: white;
+}

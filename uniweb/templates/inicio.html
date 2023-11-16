@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/principal.css' %}">
+
+</head>
+<body>
+    <section class="inicio" id="inicio">
+        <div class="content">
+            <h3> <img src="{% static 'images/logosinfondo2.png' %}" alt="">UNI-CRONOS</h3>
+            <span>Tus gustos se convierten en tu horario ideal</span>
+            <p>El objetivo de Uni-Cronos es proporcionar a los estudiantes una herramienta fácil de usar que simplifique el proceso de creación de horarios universitarios personalizados, lo que en última instancia hace que la experiencia de programación sea eficiente y agradable para los estudiantes.</p>
+            <a href="{% url 'principal' %}" class="btn">Empezar</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 - UniCronos</p>
+    </footer>
+</body>
+</html>
